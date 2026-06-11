@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Contact &amp; Réservation, Many VTC Narbonne</title>
+  <meta name="description" content="Réservez votre chauffeur VTC Many à Narbonne. 07 68 14 60 15 · vtcmany@gmail.com · Disponible 7j/7.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Plus+Jakarta+Sans:wght@500;600;700&family=Outfit:wght@700;800&display=swap" rel="stylesheet">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="canonical" href="https://many-vtc.fr/contact">
+  <meta name="robots" content="index, follow">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="fr_FR">
+  <meta property="og:site_name" content="Many VTC">
+  <meta property="og:title" content="Contact & Réservation, Many VTC Narbonne">
+  <meta property="og:description" content="Réservez votre chauffeur VTC Many à Narbonne. 07 68 14 60 15 · vtcmany@gmail.com · Disponible 7j/7.">
+  <meta property="og:url" content="https://many-vtc.fr/contact">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?w=1200&q=80">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Contact & Réservation, Many VTC Narbonne">
+  <meta name="twitter:description" content="Réservez votre chauffeur VTC Many à Narbonne. 07 68 14 60 15 · vtcmany@gmail.com · Disponible 7j/7.">
+  <meta name="twitter:image" content="https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?w=1200&q=80">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="page-contact">
+  <a class="skip-link" href="#main">Aller au contenu</a>
+
+  <header class="nav nav--hero" id="site-nav">
+    <div class="container nav__inner">
+      <a href="/" class="logo" aria-label="Many VTC, accueil">Many VTC</a>
+      <nav aria-label="Navigation principale">
+        <ul class="nav__links">
+          <li><a href="/realisations">Prestations</a></li>
+          <li><a href="/savoir-faire">Services</a></li>
+          <li><a href="/atelier">Many VTC</a></li>
+          <li><a href="/processus">Réservation</a></li>
+          <li><a href="/contact">Contact</a></li>
+        </ul>
+      </nav>
+      <a href="/contact" class="btn btn--outline nav__cta">Réserver un trajet</a>
+      <button type="button" class="menu-toggle" aria-expanded="false" aria-controls="mobile-menu" aria-label="Ouvrir le menu">
+        <span class="menu-toggle__bars" aria-hidden="true">
+          <span class="menu-toggle__bar"></span>
+          <span class="menu-toggle__bar"></span>
+        </span>
+      </button>
+    </div>
+  </header>
+
+  <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+    <button type="button" class="mobile-menu__backdrop" aria-label="Fermer le menu" tabindex="-1"></button>
+    <aside class="mobile-menu__panel" aria-label="Menu mobile">
+      <p class="mobile-menu__label">Navigation</p>
+      <nav class="mobile-menu__nav" aria-label="Liens du menu">
+        <a href="/realisations">Prestations</a>
+        <a href="/savoir-faire">Services</a>
+        <a href="/atelier">Many VTC</a>
+        <a href="/processus">Réservation</a>
+        <a href="/contact">Contact</a>
+      </nav>
+      <div class="mobile-menu__footer">
+        <a href="/contact" class="btn btn--primary mobile-menu__cta">Réserver un trajet</a>
+        <a href="tel:+33768146015" class="mobile-menu__phone">07 68 14 60 15</a>
+      </div>
+    </aside>
+  </div>
+
+<main id="main">
+    <section class="hero hero--page">
+      <div class="hero__bg">
+        <img src="https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?w=1920&q=80" alt="Contact Many VTC Narbonne">
+        <div class="hero__overlay"></div>
+      </div>
+      <div class="container hero__content reveal">
+        <h1>Réserver votre trajet</h1>
+        <p class="lead">Appelez Many directement ou envoyez votre demande par formulaire. Réponse rapide, 7j/7.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container contact-layout">
+        <form id="contact-form" class="form contact-layout__form reveal">
+          <div class="form-group">
+            <label for="nom">Nom *</label>
+            <input type="text" id="nom" name="nom" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email *</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+          <div class="form-group">
+            <label for="telephone">Téléphone</label>
+            <input type="tel" id="telephone" name="telephone">
+          </div>
+          <div class="form-group">
+            <label for="type">Type de trajet *</label>
+            <select id="type" name="type" required>
+              <option value="">Sélectionner</option>
+              <option>Course locale Narbonne</option>
+              <option>Transfert gare SNCF</option>
+              <option>Transfert aéroport</option>
+              <option>Longue distance</option>
+              <option>Mise à disposition</option>
+              <option>Événement / Mariage</option>
+              <option>Déplacement professionnel</option>
+              <option>Autre</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="budget">Nombre de passagers</label>
+            <select id="budget" name="budget">
+              <option value="">Sélectionner</option>
+              <option>1 passager</option>
+              <option>2 passagers</option>
+              <option>3 passagers</option>
+              <option>4 passagers</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="message">Détails du trajet *</label>
+            <textarea id="message" name="message" required placeholder="Date, heure, adresse de départ, destination, bagages…"></textarea>
+          </div>
+          <div class="form-group form-checkbox">
+            <input type="checkbox" id="rgpd" required>
+            <label for="rgpd">J'accepte que mes données soient utilisées pour traiter ma demande, conformément à la <a href="/politique-confidentialite">politique de confidentialité</a>.</label>
+          </div>
+          <p id="form-error" class="form-error" role="alert" hidden>Veuillez remplir tous les champs obligatoires et accepter la politique de confidentialité.</p>
+          <button type="submit" class="btn btn--primary">Envoyer ma demande</button>
+        </form>
+
+        <aside class="contact-layout__aside reveal">
+          <div id="form-success" class="form-success">
+            <h2 class="h2 form-success__title">Merci.</h2>
+            <p>Many a bien reçu votre demande et vous recontactera rapidement pour confirmer le trajet.</p>
+          </div>
+
+          <div class="contact-card">
+            <h3>Coordonnées</h3>
+            <p><strong>Many VTC</strong><br>Chauffeur privé<br>Narbonne &amp; alentours<br>Aude (11)</p>
+            <p><a href="tel:+33768146015" class="contact-card__phone">07 68 14 60 15</a></p>
+            <p><a href="mailto:vtcmany@gmail.com">vtcmany@gmail.com</a></p>
+            <p class="contact-card__hours">Disponible 7j/7<br>y compris jours fériés</p>
+          </div>
+
+          <div class="contact-card">
+            <h3>Zone d'intervention</h3>
+            <p>Narbonne, Gruissan, Sigean, Leucate, Béziers, Perpignan, Montpellier et l'ensemble de l'Aude.</p>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section section--tight">
+      <div class="container">
+        <div class="faq reveal">
+          <div class="faq-item">
+            <h3>Comment réserver une course ?</h3>
+            <p>Appelez le 07 68 14 60 15 ou envoyez un email à vtcmany@gmail.com avec la date, l'heure et les adresses.</p>
+          </div>
+          <div class="faq-item">
+            <h3>Intervenez-vous hors de Narbonne ?</h3>
+            <p>Oui, dans l'Aude et vers les gares et aéroports de la région (Montpellier, Perpignan, Toulouse…).</p>
+          </div>
+          <div class="faq-item">
+            <h3>Le tarif est-il annoncé à l'avance ?</h3>
+            <p>Oui, Many communique un prix fixe avant chaque trajet. Pas de surprise à l'arrivée.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer" id="site-footer">
+    <div class="container footer__grid">
+      <div class="footer__brand">
+        <div class="logo">Many VTC</div>
+        <p>Votre chauffeur privé à Narbonne.</p>
+        <p class="footer__baseline">Chauffeur VTC · Narbonne &amp; alentours · Disponible 7j/7</p>
+      </div>
+      <div>
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="/realisations">Prestations</a></li>
+          <li><a href="/savoir-faire">Services</a></li>
+          <li><a href="/atelier">Many VTC</a></li>
+          <li><a href="/processus">Réservation</a></li>
+          <li><a href="/contact">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li>Narbonne &amp; alentours</li>
+          <li>Aude (11)</li>
+          <li><a href="tel:+33768146015">07 68 14 60 15</a></li>
+          <li><a href="mailto:vtcmany@gmail.com">vtcmany@gmail.com</a></li>
+          <li>Disponible 7j/7</li>
+        </ul>
+      </div>
+    </div>
+    <div class="container footer__bottom">
+      <span>© 2026 Many VTC · Chauffeur privé Narbonne</span>
+      <span><a href="/mentions-legales">Mentions légales</a> · <a href="/politique-confidentialite">Confidentialité</a></span>
+    </div>
+  </footer>
+
+  <div class="sticky-cta">
+    <a href="tel:+33768146015" class="btn btn--outline">Appeler</a>
+    <a href="/contact" class="btn btn--primary">Réserver</a>
+  </div>
+
+  <script src="js/seo-config.js"></script>
+  <script src="js/seo.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

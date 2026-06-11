@@ -1,0 +1,7 @@
+{
+  "buildCommand": "python generate-seo.py",
+  "installCommand": "",
+  "outputDirectory": ".",
+  "cleanUrls": true,
+  "trailingSlash": false
+}
