@@ -10,9 +10,10 @@ const CATEGORIES = {
 const IMAGES = {
   fallback: "https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?w=1200&q=80",
   hero: "https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?w=1920&q=80",
-  narbonne: "assets/cities/narbonne.jpg",
-  montpellier: "assets/cities/montpellier.jpg",
-  beziers: "assets/cities/beziers.jpg",
+  narbonne: "assets/cities/narbonne.png",
+  montpellier: "assets/cities/montpellier.png",
+  beziers: "assets/cities/beziers.png",
+  beziersPro: "assets/cities/beziers-pro.png",
   atelier: "https://images.unsplash.com/photo-1544627661-8a4f2d5c6e3b?w=1200&q=80",
   cuisine: "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=80",
   dressing: "https://images.unsplash.com/photo-1502920917128-1aa500764cbd?w=1200&q=80",
@@ -93,7 +94,7 @@ const PROJECTS = [
     type_client: "Professionnel",
     surface: "Aller-retour",
     featured: false,
-    image: IMAGES.bureau,
+    image: IMAGES.beziersPro,
     description_courte: "Trajet professionnel Narbonne ↔ Béziers pour rendez-vous clients ou sites d'entreprise.",
     description: [
       "Many accompagne les professionnels de l'Aude pour leurs déplacements vers Béziers, Montpellier ou Perpignan.",
@@ -101,7 +102,7 @@ const PROJECTS = [
       "Facturation simplifiée sur demande pour les entreprises et indépendants.",
     ],
     materiaux: ["Discrétion", "Ponctualité", "Facturation pro", "Aller-retour"],
-    galerie: [IMAGES.bureau, IMAGES.wood, IMAGES.detail],
+    galerie: [IMAGES.beziersPro, IMAGES.wood, IMAGES.detail],
   },
   {
     slug: "mariage-gruissan",
