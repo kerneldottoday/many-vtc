@@ -165,6 +165,10 @@ def render_prestation(project: dict, all_projects: list[dict]) -> str:
   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Plus+Jakarta+Sans:wght@500;600;700&family=Outfit:wght@700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/css/style.css">
   <script type="application/ld+json">{json.dumps(schema, ensure_ascii=False)}</script>
+  <script>
+    window.va = window.va || function () {{ (window.vaq = window.vaq || []).push(arguments); }};
+  </script>
+  <script defer src="/_vercel/insights/script.js"></script>
 </head>
 <body class="page-projet">
   <a class="skip-link" href="#main">Aller au contenu</a>
