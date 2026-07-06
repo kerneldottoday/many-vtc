@@ -1,36 +1,36 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Many VTC — Next.js 14
 
-## Getting Started
+Site vitrine **Many VTC** (MANY CARS), chauffeur privé à Narbonne.
 
-First, run the development server:
+**Stack :** Next.js 14 · App Router · Tailwind CSS · GSAP · i18n `/fr` `/en` `/es`
+
+## Développement
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Ouvrir [http://localhost:3000/fr](http://localhost:3000/fr)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Déploiement Vercel
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+1. Importer le dossier `many-vtc-web` sur Vercel
+2. Variable d'environnement optionnelle : `NEXT_PUBLIC_SITE_URL=https://www.vtcmany.fr`
+3. Domaine : `www.vtcmany.fr`
 
-## Learn More
+## Structure
 
-To learn more about Next.js, take a look at the following resources:
+| Route | Page |
+|-------|------|
+| `/fr` | Accueil (FR) |
+| `/en` | Home (EN) |
+| `/es` | Inicio (ES) |
+| `/{locale}/services` | Services |
+| `/{locale}/contact` | Contact + formulaire |
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Notes
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Pas de section tarifs (sur devis uniquement)
+- Vocabulaire réglementaire : VTC / chauffeur privé — jamais « taxi »
+- Formulaire contact : API `/api/contact` via MailerSend (variables `MAILERSEND_*` sur Vercel)
