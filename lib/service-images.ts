@@ -4,7 +4,7 @@ export const SERVICE_IMAGES: Record<string, { src: string; alt: string }> = {
     alt: "Canal de la Robine à Narbonne",
   },
   beaches: {
-    src: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&q=80",
+    src: "/assets/images/plages.png",
     alt: "Plage de Gruissan et stations balnéaires",
   },
   airport: {
