@@ -34,7 +34,7 @@ loadEnv();
 
 const apiKey = process.env.MAILERSEND_API_KEY;
 const fromEmail = process.env.MAILERSEND_FROM_EMAIL;
-const fromName = process.env.MAILERSEND_FROM_NAME || "Many VTC";
+const fromName = process.env.MAILERSEND_FROM_NAME || "VTC MANY";
 const toEmail = process.argv[2] || process.env.MAILERSEND_TO_EMAIL || DEFAULT_TO;
 
 if (!apiKey) {
@@ -47,9 +47,9 @@ if (!fromEmail) {
   process.exit(1);
 }
 
-const subject = "Test Many VTC — formulaire contact";
+const subject = "Test VTC MANY — formulaire contact";
 const text = [
-  "Ceci est un email de test MailerSend pour Many VTC.",
+  "Ceci est un email de test MailerSend pour VTC MANY.",
   "",
   "Si vous recevez ce message, la configuration est correcte.",
   "",
@@ -67,7 +67,7 @@ const res = await fetch("https://api.mailersend.com/v1/email", {
   },
   body: JSON.stringify({
     from: { email: fromEmail, name: fromName },
-    to: [{ email: toEmail, name: "Test Many VTC" }],
+    to: [{ email: toEmail, name: "Test VTC MANY" }],
     subject,
     text,
   }),

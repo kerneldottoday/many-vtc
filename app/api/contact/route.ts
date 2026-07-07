@@ -17,7 +17,7 @@ type ContactPayload = {
 
 function buildEmailBody(data: ContactPayload) {
   return [
-    "Nouvelle demande de réservation — Many VTC",
+    "Nouvelle demande de réservation — VTC MANY",
     "",
     `Prénom : ${data.firstName ?? "—"}`,
     `Nom : ${data.lastName ?? "—"}`,
@@ -45,7 +45,7 @@ async function sendViaMailerSend(
 
   const fromEmail = process.env.MAILERSEND_FROM_EMAIL;
   if (!fromEmail) {
-    console.error("[Many VTC contact] MAILERSEND_FROM_EMAIL manquant");
+    console.error("[VTC MANY contact] MAILERSEND_FROM_EMAIL manquant");
     return false;
   }
 
@@ -69,7 +69,7 @@ async function sendViaMailerSend(
 
   if (!res.ok) {
     const err = await res.text().catch(() => "");
-    console.error("[Many VTC contact] MailerSend", res.status, err);
+    console.error("[VTC MANY contact] MailerSend", res.status, err);
   }
 
   return res.ok;
@@ -106,7 +106,7 @@ export async function POST(request: Request) {
     const subject = `Nouvelle demande de réservation — ${replyToName || firstName}`;
     const text = buildEmailBody(body);
 
-    console.info("[Many VTC contact]", text);
+    console.info("[VTC MANY contact]", text);
 
     const sent = await sendViaMailerSend(subject, text, email, replyToName);
     if (process.env.NODE_ENV === "production" && process.env.MAILERSEND_API_KEY && !sent) {

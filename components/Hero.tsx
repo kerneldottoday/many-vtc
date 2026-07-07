@@ -16,9 +16,10 @@ const HERO_POSTER =
 type HeroProps = {
   dict: Dictionary;
   locale: Locale;
+  h1?: string;
 };
 
-export default function Hero({ dict, locale }: HeroProps) {
+export default function Hero({ dict, locale, h1 }: HeroProps) {
   const sectionRef = useRef<HTMLElement>(null);
   const videoRef = useRef<HTMLVideoElement>(null);
 
@@ -109,9 +110,9 @@ export default function Hero({ dict, locale }: HeroProps) {
           {dict.hero.displayTitle}
         </p>
 
-        <h1 className="hero-title sr-only">{dict.hero.title}</h1>
+        <h1 className="hero-title sr-only">{h1 ?? dict.hero.title}</h1>
         <p className="font-display mt-4 max-w-2xl text-2xl font-medium tracking-tighter text-white md:text-4xl">
-          {dict.hero.title}
+          {h1 ?? dict.hero.title}
         </p>
 
         <p className="hero-sub body-lg mt-6 max-w-xl">{dict.hero.subtitle}</p>

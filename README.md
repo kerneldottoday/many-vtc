@@ -1,6 +1,6 @@
-# Many VTC — Next.js 14
+# VTC MANY — Next.js 14
 
-Site vitrine **Many VTC** (MANY CARS), chauffeur privé à Narbonne.
+Site vitrine **VTC MANY** (MANY CARS), chauffeur privé à Narbonne.
 
 **Stack :** Next.js 14 · App Router · Tailwind CSS · GSAP · i18n `/fr` `/en` `/es`
 

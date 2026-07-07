@@ -11,7 +11,7 @@ export default function GlobalError({
     <html lang="fr">
       <body style={{ background: "#050505", color: "#fff", fontFamily: "system-ui, sans-serif" }}>
         <div style={{ minHeight: "100vh", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", padding: "2rem", textAlign: "center" }}>
-          <h1 style={{ fontSize: "1.75rem", marginBottom: "1rem" }}>Many VTC — Erreur critique</h1>
+          <h1 style={{ fontSize: "1.75rem", marginBottom: "1rem" }}>VTC MANY — Erreur critique</h1>
           <p style={{ opacity: 0.7, marginBottom: "2rem" }}>{error.message || "Une erreur inattendue s&apos;est produite."}</p>
           <button
             type="button"

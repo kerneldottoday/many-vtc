@@ -43,6 +43,18 @@ export default function Footer({ dict, locale }: FooterProps) {
           <a href={`tel:${business.phone}`} className="label-meta hover:text-white">
             {business.phoneDisplay}
           </a>
+          <a
+            href={business.googleMapsUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="label-meta hover:text-white"
+          >
+            {locale === "fr"
+              ? "Avis Google"
+              : locale === "en"
+                ? "Google reviews"
+                : "Reseñas Google"}
+          </a>
         </nav>
 
         <p className="label-meta mt-12 text-white/30">

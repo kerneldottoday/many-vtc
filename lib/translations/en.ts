@@ -1,29 +1,29 @@
 export const dictionary = {
   meta: {
     home: {
-      title: "Many VTC | Private Chauffeur in Narbonne — 24/7",
+      title: "VTC MANY | Private Chauffeur in Narbonne — 24/7",
       description:
-        "Many VTC — Private chauffeur in Narbonne and surrounding area, available 24/7. Local rides, station and airport transfers, long-distance trips.",
+        "VTC MANY — Private chauffeur in Narbonne and surrounding area, available 24/7. Local rides, station and airport transfers, long-distance trips.",
     },
     services: {
-      title: "VTC Services Narbonne | Many VTC — Private Chauffeur",
+      title: "VTC Services Narbonne | VTC MANY — Private Chauffeur",
       description:
-        "Local rides, station and airport transfers, long-distance and hourly hire. All Many VTC services in Narbonne and Occitanie, 24/7.",
+        "Local rides, station and airport transfers, long-distance and hourly hire. All VTC MANY services in Narbonne and Occitanie, 24/7.",
     },
     contact: {
-      title: "Book Your VTC in Narbonne | Many VTC",
+      title: "Book Your VTC in Narbonne | VTC MANY",
       description:
-        "Book Many VTC: +33 7 68 14 60 15 or vtcmany@gmail.com. Private chauffeur in Narbonne, fast response 24/7.",
+        "Book VTC MANY: +33 7 68 14 60 15 or vtcmany@gmail.com. Private chauffeur in Narbonne, fast response 24/7.",
     },
     mentions: {
-      title: "Legal Notice | Many VTC",
+      title: "Legal Notice | VTC MANY",
       description:
-        "Legal notice for the Many VTC website, published by MANY CARS, private chauffeur in Narbonne.",
+        "Legal notice for the VTC MANY website, published by MANY CARS, private chauffeur in Narbonne.",
     },
     privacy: {
-      title: "Privacy Policy | Many VTC",
+      title: "Privacy Policy | VTC MANY",
       description:
-        "Many VTC (MANY CARS) privacy policy: how we handle your data when you contact us or make a booking.",
+        "VTC MANY (MANY CARS) privacy policy: how we handle your data when you contact us or make a booking.",
     },
   },
   nav: {
@@ -35,7 +35,7 @@ export const dictionary = {
   },
   hero: {
     badge: "Available 24/7",
-    displayTitle: "MANY VTC",
+    displayTitle: "VTC MANY",
     title: "Your private chauffeur in Narbonne",
     subtitle:
       "Local rides, station and airport transfers, long-distance trips and hourly hire. A fixed fare quoted before every journey.",
@@ -43,11 +43,11 @@ export const dictionary = {
     ctaBook: "Request a quote",
   },
   intro: {
-    text: "Many VTC is your private chauffeur based in Narbonne. City rides, transfers to Montpellier and Toulouse airports, or hourly hire for an event — one point of contact, available 24 hours a day, 7 days a week.",
+    text: "VTC MANY is your private chauffeur based in Narbonne. City rides, transfers to Montpellier and Toulouse airports, or hourly hire for an event — one point of contact, available 24 hours a day, 7 days a week.",
   },
   availability: {
     title: "Always available",
-    text: "Many VTC operates 24/7, including public holidays and last-minute requests.",
+    text: "VTC MANY operates 24/7, including public holidays and last-minute requests.",
     items: ["24/7", "7 days", "Public holidays", "Last minute"],
   },
   services: {
@@ -109,7 +109,7 @@ export const dictionary = {
         short:
           "Daily trips in Narbonne and neighbouring towns: home, station, hospital, business or restaurant. Pick-up at your chosen address, fare quoted before departure.",
         paragraphs: [
-          "Many VTC handles your daily rides in Narbonne and nearby communes. Direct journey with fare confirmed before departure.",
+          "VTC MANY handles your daily rides in Narbonne and nearby communes. Direct journey with fare confirmed before departure.",
           "Ideal for medical appointments, business travel or transfers to Narbonne SNCF station.",
         ],
         features: [
@@ -182,7 +182,7 @@ export const dictionary = {
     },
   },
   trust: {
-    overline: "Why Many VTC",
+    overline: "Why VTC MANY",
     title: "Your trusted private chauffeur",
     items: [
       { label: "Chauffeur", value: "Experienced and courteous" },
@@ -205,7 +205,7 @@ export const dictionary = {
   coverage: {
     overline: "Service area",
     title: "Narbonne and all of Occitanie",
-    text: "Many VTC operates from Narbonne to Gruissan, Sigean, Coursan, Leucate, Béziers, Perpignan, Montpellier, Toulouse, Carcassonne, Minervois, Aude and Occitanie.",
+    text: "VTC MANY operates from Narbonne to Gruissan, Sigean, Coursan, Leucate, Béziers, Perpignan, Montpellier, Toulouse, Carcassonne, Minervois, Aude and Occitanie.",
     cities: [
       "Narbonne",
       "Gruissan",
@@ -332,7 +332,7 @@ export const dictionary = {
     contact: "Contact",
     legal: "Legal notice",
     privacy: "Privacy",
-    copyright: "© {year} Many VTC · Private chauffeur Narbonne",
+    copyright: "© {year} VTC MANY · Private chauffeur Narbonne",
     ctaEmail: "vtcmany@gmail.com",
   },
   cta: {
@@ -352,9 +352,9 @@ export const dictionary = {
   legal: {
     mentionsTitle: "Legal notice",
     privacyTitle: "Privacy policy",
-    mentionsLead: "Legal information for the Many VTC website.",
+    mentionsLead: "Legal information for the VTC MANY website.",
     privacyLead:
-      "How Many VTC (MANY CARS) handles your data when you contact us, book or use the online form.",
+      "How VTC MANY (MANY CARS) handles your data when you contact us, book or use the online form.",
     mentionsSections: [
       {
         title: "Publisher",
@@ -413,6 +413,6 @@ export const dictionary = {
     ],
   },
   whatsapp: {
-    label: "Contact Many VTC on WhatsApp",
+    label: "Contact VTC MANY on WhatsApp",
   },
 };

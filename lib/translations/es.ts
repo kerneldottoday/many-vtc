@@ -1,29 +1,29 @@
 export const dictionary = {
   meta: {
     home: {
-      title: "Many VTC | Chófer privado en Narbona — 24h/24",
+      title: "VTC MANY | Chófer privado en Narbona — 24h/24",
       description:
-        "Many VTC — Chófer privado en Narbona y alrededores, disponible 24h/24 y 7d/7. Trayectos locales, transferencias estación y aeropuerto, larga distancia.",
+        "VTC MANY — Chófer privado en Narbona y alrededores, disponible 24h/24 y 7d/7. Trayectos locales, transferencias estación y aeropuerto, larga distancia.",
     },
     services: {
-      title: "Servicios VTC Narbona | Many VTC — Chófer privado",
+      title: "Servicios VTC Narbona | VTC MANY — Chófer privado",
       description:
-        "Trayectos locales, transferencias estación y aeropuerto, larga distancia y disposición por horas. Todos los servicios Many VTC en Narbona y Occitania, 24h/24.",
+        "Trayectos locales, transferencias estación y aeropuerto, larga distancia y disposición por horas. Todos los servicios VTC MANY en Narbona y Occitania, 24h/24.",
     },
     contact: {
-      title: "Reserve su VTC en Narbona | Many VTC",
+      title: "Reserve su VTC en Narbona | VTC MANY",
       description:
-        "Reserve Many VTC: 07 68 14 60 15 o vtcmany@gmail.com. Chófer privado en Narbona, respuesta rápida 24h/24 y 7d/7.",
+        "Reserve VTC MANY: 07 68 14 60 15 o vtcmany@gmail.com. Chófer privado en Narbona, respuesta rápida 24h/24 y 7d/7.",
     },
     mentions: {
-      title: "Aviso legal | Many VTC",
+      title: "Aviso legal | VTC MANY",
       description:
-        "Aviso legal del sitio Many VTC, editado por MANY CARS, chófer privado en Narbona.",
+        "Aviso legal del sitio VTC MANY, editado por MANY CARS, chófer privado en Narbona.",
     },
     privacy: {
-      title: "Política de privacidad | Many VTC",
+      title: "Política de privacidad | VTC MANY",
       description:
-        "Política de privacidad de Many VTC (MANY CARS): tratamiento de datos en contacto o reserva.",
+        "Política de privacidad de VTC MANY (MANY CARS): tratamiento de datos en contacto o reserva.",
     },
   },
   nav: {
@@ -35,7 +35,7 @@ export const dictionary = {
   },
   hero: {
     badge: "Disponible 24h/24 · 7d/7",
-    displayTitle: "MANY VTC",
+    displayTitle: "VTC MANY",
     title: "Su chófer privado en Narbona",
     subtitle:
       "Trayectos locales, transferencias estación y aeropuerto, larga distancia y disposición por horas. Tarifa anunciada antes de cada trayecto.",
@@ -43,11 +43,11 @@ export const dictionary = {
     ctaBook: "Solicitar presupuesto",
   },
   intro: {
-    text: "Many VTC es su chófer privado con base en Narbona. Trayecto urbano, transferencia a los aeropuertos de Montpellier y Toulouse, o disposición por horas para un evento: un solo interlocutor, disponible 24 horas al día, 7 días a la semana.",
+    text: "VTC MANY es su chófer privado con base en Narbona. Trayecto urbano, transferencia a los aeropuertos de Montpellier y Toulouse, o disposición por horas para un evento: un solo interlocutor, disponible 24 horas al día, 7 días a la semana.",
   },
   availability: {
     title: "Siempre disponible",
-    text: "Many VTC interviene 24h/24 y 7d/7, incluidos festivos y urgencias de última hora.",
+    text: "VTC MANY interviene 24h/24 y 7d/7, incluidos festivos y urgencias de última hora.",
     items: ["24h/24", "7d/7", "Festivos", "Última hora"],
   },
   services: {
@@ -109,7 +109,7 @@ export const dictionary = {
         short:
           "Desplazamientos diarios en Narbona y comunas vecinas: domicilio, estación, hospital, empresa o restaurante. Recogida en la dirección elegida, tarifa anunciada antes de la salida.",
         paragraphs: [
-          "Many VTC realiza sus trayectos diarios en Narbona y comunas cercanas. Recogida en la dirección elegida, trayecto directo y tarifa comunicada antes de la salida.",
+          "VTC MANY realiza sus trayectos diarios en Narbona y comunas cercanas. Recogida en la dirección elegida, trayecto directo y tarifa comunicada antes de la salida.",
           "Ideal para cita médica, desplazamiento profesional o transferencia a la estación SNCF de Narbona.",
         ],
         features: [
@@ -182,7 +182,7 @@ export const dictionary = {
     },
   },
   trust: {
-    overline: "Por qué Many VTC",
+    overline: "Por qué VTC MANY",
     title: "Su chófer privado de confianza",
     items: [
       { label: "Chófer", value: "Experimentado y cortés" },
@@ -205,7 +205,7 @@ export const dictionary = {
   coverage: {
     overline: "Zona de intervención",
     title: "Narbona y toda Occitania",
-    text: "Many VTC interviene desde Narbona hacia Gruissan, Sigean, Coursan, Leucate, Béziers, Perpignan, Montpellier, Toulouse, Carcassonne, Minervois, Aude y Occitania.",
+    text: "VTC MANY interviene desde Narbona hacia Gruissan, Sigean, Coursan, Leucate, Béziers, Perpignan, Montpellier, Toulouse, Carcassonne, Minervois, Aude y Occitania.",
     cities: [
       "Narbona",
       "Gruissan",
@@ -332,7 +332,7 @@ export const dictionary = {
     contact: "Contacto",
     legal: "Aviso legal",
     privacy: "Privacidad",
-    copyright: "© {year} Many VTC · Chófer privado Narbona",
+    copyright: "© {year} VTC MANY · Chófer privado Narbona",
     ctaEmail: "vtcmany@gmail.com",
   },
   cta: {
@@ -352,9 +352,9 @@ export const dictionary = {
   legal: {
     mentionsTitle: "Aviso legal",
     privacyTitle: "Política de privacidad",
-    mentionsLead: "Información legal del sitio Many VTC.",
+    mentionsLead: "Información legal del sitio VTC MANY.",
     privacyLead:
-      "Cómo Many VTC (MANY CARS) trata sus datos en contacto, reserva o formulario en línea.",
+      "Cómo VTC MANY (MANY CARS) trata sus datos en contacto, reserva o formulario en línea.",
     mentionsSections: [
       {
         title: "Editor del sitio",
@@ -413,6 +413,6 @@ export const dictionary = {
     ],
   },
   whatsapp: {
-    label: "Contactar Many VTC por WhatsApp",
+    label: "Contactar VTC MANY por WhatsApp",
   },
 };

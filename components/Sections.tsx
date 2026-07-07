@@ -9,6 +9,9 @@ import type { Dictionary } from "@/lib/translations";
 import type { Locale } from "@/lib/i18n";
 import { business } from "@/lib/business";
 import { SERVICE_IMAGES } from "@/lib/service-images";
+import type { ServiceSlug } from "@/lib/routes";
+import { servicePath } from "@/lib/routes";
+import { getSeoMeta } from "@/lib/seo-config";
 import Reveal from "./Reveal";
 import FaqItem from "./FaqItem";
 
@@ -38,13 +41,17 @@ function ServicePhotoFrame({ id, title }: { id: string; title: string }) {
         alt={image.alt}
         width={640}
         height={480}
-        className="image-hover-scale aspect-[4/3] w-full object-cover"
+        className="image-hover-scale aspect-[4/3] w-full object-cover brightness-105"
         sizes="(max-width: 640px) 100vw, 50vw"
       />
-      <div className="absolute inset-0 bg-black/40 transition-opacity duration-500 group-hover:opacity-0" />
     </div>
   );
 }
+
+const PREVIEW_LINKS: Partial<Record<string, ServiceSlug>> = {
+  airport: "transfert-aeroport-montpellier",
+  station: "transfert-gare-narbonne",
+};
 
 export function ServicesPreview({ dict, locale = "fr" }: SectionProps) {
   return (
@@ -61,7 +68,13 @@ export function ServicesPreview({ dict, locale = "fr" }: SectionProps) {
         </div>
 
         <div className="mt-16 grid gap-6 md:grid-cols-3">
-          {dict.services.items.map((item, i) => (
+          {dict.services.items.map((item, i) => {
+            const slug = PREVIEW_LINKS[item.id];
+            const detailHref = slug
+              ? `/${locale}/${servicePath(slug)}`
+              : `/${locale}/services#${item.id}`;
+
+            return (
             <Reveal key={item.id} delay={i * 0.05}>
               <article className="card-surface group h-full p-5 transition hover:border-white/15">
                 <ServicePhotoFrame id={item.id} title={item.title} />
@@ -70,9 +83,16 @@ export function ServicesPreview({ dict, locale = "fr" }: SectionProps) {
                 ) : null}
                 <h3 className="font-display mt-2 text-xl font-medium tracking-tighter">{item.title}</h3>
                 <p className="body-md mt-3 text-base">{item.description}</p>
+                <Link href={detailHref} className="editorial-link mt-4 inline-flex text-sm">
+                  {dict.services.explore}
+                  <span className="editorial-link-arrow" aria-hidden>
+                    →
+                  </span>
+                </Link>
               </article>
             </Reveal>
-          ))}
+            );
+          })}
         </div>
 
         <Reveal className="mt-12">
@@ -90,13 +110,26 @@ export function ServicesPreview({ dict, locale = "fr" }: SectionProps) {
 
 const SERVICE_DETAIL_ORDER = ["local", "beaches", "transfers", "long", "disposal"] as const;
 
-export function ServicesFull({ dict }: SectionProps) {
+const DETAIL_LINKS: Partial<
+  Record<(typeof SERVICE_DETAIL_ORDER)[number], ServiceSlug[]>
+> = {
+  transfers: [
+    "transfert-aeroport-montpellier",
+    "transfert-aeroport-toulouse",
+    "transfert-gare-narbonne",
+  ],
+  long: ["longue-distance"],
+  disposal: ["mise-a-disposition-evenements"],
+};
+
+export function ServicesFull({ dict, locale = "fr" }: SectionProps) {
   return (
     <div className="space-y-24 md:space-y-32">
       {SERVICE_DETAIL_ORDER.map((key, i) => {
         const service = dict.services.detail[key];
         const image = SERVICE_IMAGES[key];
         const num = String(i + 1).padStart(2, "0");
+        const links = DETAIL_LINKS[key];
 
         return (
           <Reveal key={key}>
@@ -119,6 +152,26 @@ export function ServicesFull({ dict }: SectionProps) {
                     </li>
                   ))}
                 </ul>
+                {links?.length ? (
+                  <ul className="mt-8 space-y-2">
+                    {links.map((slug) => {
+                      const seo = getSeoMeta(slug, locale);
+                      return (
+                        <li key={slug}>
+                          <Link
+                            href={`/${locale}/${servicePath(slug)}`}
+                            className="editorial-link text-base"
+                          >
+                            {seo.h1}
+                            <span className="editorial-link-arrow" aria-hidden>
+                              →
+                            </span>
+                          </Link>
+                        </li>
+                      );
+                    })}
+                  </ul>
+                ) : null}
               </div>
               {image ? (
                 <div className="col-span-12 lg:col-span-4">
@@ -257,10 +310,9 @@ export function GallerySection({ dict }: SectionProps) {
           src={GALLERY_IMAGES[0]}
           alt={dict.gallery.items[0].alt}
           fill
-          className="gallery-parallax-img object-cover"
+          className="gallery-parallax-img object-cover brightness-105"
           sizes="100vw"
         />
-        <div className="absolute inset-0 bg-black/30" />
         <p className="label-meta absolute bottom-6 left-6 md:bottom-10 md:left-10">
           {dict.gallery.items[0].caption}
         </p>
@@ -273,11 +325,10 @@ export function GallerySection({ dict }: SectionProps) {
               src={GALLERY_IMAGES[i + 1]}
               alt={item.alt}
               fill
-              className="image-hover-scale object-cover"
+              className="image-hover-scale object-cover brightness-105"
               sizes="50vw"
             />
-            <div className="absolute inset-0 bg-black/50 transition-opacity duration-500 group-hover:opacity-0" />
-            <p className="label-meta absolute bottom-4 left-4 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+            <p className="label-meta absolute bottom-4 left-4">
               {item.caption}
             </p>
           </div>

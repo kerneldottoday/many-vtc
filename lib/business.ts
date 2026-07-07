@@ -1,5 +1,5 @@
 export const business = {
-  name: "Many VTC",
+  name: "VTC MANY",
   legalName: "MANY CARS",
   phone: "+33768146015",
   phoneDisplay: "07 68 14 60 15",

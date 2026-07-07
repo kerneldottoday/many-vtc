@@ -1,4 +1,5 @@
 import Hero from "@/components/Hero";
+import JsonLd from "@/components/JsonLd";
 import Reveal from "@/components/Reveal";
 import {
   AvailabilitySection,
@@ -10,7 +11,13 @@ import {
   TrustBand,
 } from "@/components/Sections";
 import { isLocale, type Locale } from "@/lib/i18n";
-import { pageMetadata } from "@/lib/seo";
+import { getSeoMeta } from "@/lib/seo-config";
+import {
+  buildFaqPageJsonLd,
+  buildLimousineServiceJsonLd,
+  buildWebSiteJsonLd,
+  seoMetadata,
+} from "@/lib/seo";
 import { getDictionary } from "@/lib/translations";
 import { notFound } from "next/navigation";
 
@@ -21,8 +28,7 @@ export async function generateMetadata({
 }) {
   const { locale: raw } = await params;
   if (!isLocale(raw)) return {};
-  const dict = await getDictionary(raw);
-  return pageMetadata(raw as Locale, dict.meta.home);
+  return seoMetadata("home", raw as Locale);
 }
 
 export default async function HomePage({
@@ -34,10 +40,18 @@ export default async function HomePage({
   if (!isLocale(raw)) notFound();
   const locale = raw as Locale;
   const dict = await getDictionary(locale);
+  const seo = getSeoMeta("home", locale);
 
   return (
     <>
-      <Hero dict={dict} locale={locale} />
+      <JsonLd
+        data={[
+          buildLimousineServiceJsonLd(locale),
+          buildWebSiteJsonLd(locale),
+          buildFaqPageJsonLd(dict.faq.items),
+        ]}
+      />
+      <Hero dict={dict} locale={locale} h1={seo.h1} />
 
       <section className="border-t border-brand-border py-16 md:py-24">
         <div className="mx-auto max-w-editorial px-5 md:px-10 lg:px-20">

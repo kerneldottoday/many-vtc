@@ -1,7 +1,7 @@
 import LegalContent from "@/components/LegalContent";
 import Reveal from "@/components/Reveal";
 import { isLocale, type Locale } from "@/lib/i18n";
-import { pageMetadata } from "@/lib/seo";
+import { seoMetadata } from "@/lib/seo";
 import { getDictionary } from "@/lib/translations";
 import { notFound } from "next/navigation";
 
@@ -12,8 +12,7 @@ export async function generateMetadata({
 }) {
   const { locale: raw } = await params;
   if (!isLocale(raw)) return {};
-  const dict = await getDictionary(raw);
-  return pageMetadata(raw as Locale, dict.meta.privacy, "politique-confidentialite");
+  return seoMetadata("privacy", raw as Locale);
 }
 
 export default async function PolitiqueConfidentialitePage({

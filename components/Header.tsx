@@ -1,19 +1,11 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import { Locale, localeFlags, locales } from "@/lib/i18n";
-import { business } from "@/lib/business";
 import type { Dictionary } from "@/lib/translations";
-
-const LOGO = {
-  src: "/assets/vtc-many-logo-header.png",
-  width: 941,
-  height: 153,
-} as const;
 
 const REVEAL_EASE = "cubic-bezier(0.22, 1, 0.36, 1)";
 
@@ -151,17 +143,9 @@ export default function Header({ dict, locale }: HeaderProps) {
       <div className="mx-auto flex h-[100px] max-w-editorial items-center justify-between gap-4 px-5 md:px-10 lg:px-20">
         <Link
           href={`/${locale}`}
-          className="relative block shrink-0 transition-opacity hover:opacity-80"
-          aria-label={`${business.name} — ${business.city}`}
+          className="font-display text-lg font-bold uppercase tracking-tighter text-white md:text-xl"
         >
-          <Image
-            src={LOGO.src}
-            alt={`VTC MANY — Chauffeur privé à ${business.city}`}
-            width={LOGO.width}
-            height={LOGO.height}
-            className="h-10 w-auto md:h-12"
-            priority
-          />
+          VTC MANY
         </Link>
 
         <nav className="hidden items-center gap-8 lg:flex" aria-label="Main">

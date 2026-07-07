@@ -1,29 +1,29 @@
 export const dictionary = {
   meta: {
     home: {
-      title: "Many VTC | Chauffeur privé à Narbonne — 24h/24",
+      title: "VTC MANY | Chauffeur privé à Narbonne — 24h/24",
       description:
-        "Many VTC — Chauffeur privé à Narbonne et alentours, disponible 24h/24 et 7j/7. Courses locales, transferts gare et aéroport, longue distance.",
+        "VTC MANY — Chauffeur privé à Narbonne et alentours, disponible 24h/24 et 7j/7. Courses locales, transferts gare et aéroport, longue distance.",
     },
     services: {
-      title: "Services VTC Narbonne | Many VTC — Chauffeur privé",
+      title: "Services VTC Narbonne | VTC MANY — Chauffeur privé",
       description:
-        "Courses locales, transferts gare et aéroport, longue distance et mise à disposition. Tous les services Many VTC à Narbonne et en Occitanie, 24h/24.",
+        "Courses locales, transferts gare et aéroport, longue distance et mise à disposition. Tous les services VTC MANY à Narbonne et en Occitanie, 24h/24.",
     },
     contact: {
-      title: "Réservez votre VTC à Narbonne | Many VTC",
+      title: "Réservez votre VTC à Narbonne | VTC MANY",
       description:
-        "Réservez Many VTC : 07 68 14 60 15 ou vtcmany@gmail.com. Chauffeur privé à Narbonne, réponse rapide 24h/24 et 7j/7.",
+        "Réservez VTC MANY : 07 68 14 60 15 ou vtcmany@gmail.com. Chauffeur privé à Narbonne, réponse rapide 24h/24 et 7j/7.",
     },
     mentions: {
-      title: "Mentions légales | Many VTC",
+      title: "Mentions légales | VTC MANY",
       description:
-        "Mentions légales du site Many VTC, édité par MANY CARS, chauffeur privé à Narbonne.",
+        "Mentions légales du site VTC MANY, édité par MANY CARS, chauffeur privé à Narbonne.",
     },
     privacy: {
-      title: "Politique de confidentialité | Many VTC",
+      title: "Politique de confidentialité | VTC MANY",
       description:
-        "Politique de confidentialité de Many VTC (MANY CARS) : traitement des données lors d'un contact ou d'une réservation.",
+        "Politique de confidentialité de VTC MANY (MANY CARS) : traitement des données lors d'un contact ou d'une réservation.",
     },
   },
   nav: {
@@ -35,7 +35,7 @@ export const dictionary = {
   },
   hero: {
     badge: "Disponible 24h/24 · 7j/7",
-    displayTitle: "MANY VTC",
+    displayTitle: "VTC MANY",
     title: "Votre chauffeur privé à Narbonne",
     subtitle:
       "Courses locales, transferts gare et aéroport, longues distances et mise à disposition. Un tarif annoncé avant chaque trajet.",
@@ -43,11 +43,11 @@ export const dictionary = {
     ctaBook: "Demander un devis",
   },
   intro: {
-    text: "Many VTC est votre chauffeur privé basé à Narbonne. Course en ville, transfert vers les aéroports de Montpellier et Toulouse, ou mise à disposition pour un événement : un seul interlocuteur, disponible 24 heures sur 24 et 7 jours sur 7.",
+    text: "VTC MANY est votre chauffeur privé basé à Narbonne. Course en ville, transfert vers les aéroports de Montpellier et Toulouse, ou mise à disposition pour un événement : un seul interlocuteur, disponible 24 heures sur 24 et 7 jours sur 7.",
   },
   availability: {
     title: "Toujours disponible",
-    text: "Many VTC intervient 24h/24 et 7j/7, y compris jours fériés et urgences de dernière minute.",
+    text: "VTC MANY intervient 24h/24 et 7j/7, y compris jours fériés et urgences de dernière minute.",
     items: ["24h/24", "7j/7", "Jours fériés", "Dernière minute"],
   },
   services: {
@@ -109,7 +109,7 @@ export const dictionary = {
         short:
           "Déplacements quotidiens à Narbonne et communes voisines : domicile, gare, hôpital, entreprise ou restaurant. Prise en charge à l'adresse de votre choix, tarif annoncé avant le départ.",
         paragraphs: [
-          "Many VTC assure vos courses quotidiennes à Narbonne et dans les communes proches. Prise en charge à l'adresse de votre choix, trajet direct et tarif communiqué avant le départ.",
+          "VTC MANY assure vos courses quotidiennes à Narbonne et dans les communes proches. Prise en charge à l'adresse de votre choix, trajet direct et tarif communiqué avant le départ.",
           "Idéal pour un rendez-vous médical, un déplacement professionnel ou un transfert vers la gare SNCF de Narbonne.",
         ],
         features: [
@@ -182,7 +182,7 @@ export const dictionary = {
     },
   },
   trust: {
-    overline: "Pourquoi Many VTC",
+    overline: "Pourquoi VTC MANY",
     title: "Votre chauffeur privé de confiance",
     items: [
       { label: "Chauffeur", value: "Expérimenté et courtois" },
@@ -205,7 +205,7 @@ export const dictionary = {
   coverage: {
     overline: "Zone d'intervention",
     title: "Narbonne et toute l'Occitanie",
-    text: "Many VTC intervient depuis Narbonne vers Gruissan, Sigean, Coursan, Leucate, Béziers, Perpignan, Montpellier, Toulouse, Carcassonne, Minervois, Aude et Occitanie.",
+    text: "VTC MANY intervient depuis Narbonne vers Gruissan, Sigean, Coursan, Leucate, Béziers, Perpignan, Montpellier, Toulouse, Carcassonne, Minervois, Aude et Occitanie.",
     cities: [
       "Narbonne",
       "Gruissan",
@@ -332,7 +332,7 @@ export const dictionary = {
     contact: "Contact",
     legal: "Mentions légales",
     privacy: "Confidentialité",
-    copyright: "© {year} Many VTC · Chauffeur privé Narbonne",
+    copyright: "© {year} VTC MANY · Chauffeur privé Narbonne",
     ctaEmail: "vtcmany@gmail.com",
   },
   cta: {
@@ -352,9 +352,9 @@ export const dictionary = {
   legal: {
     mentionsTitle: "Mentions légales",
     privacyTitle: "Politique de confidentialité",
-    mentionsLead: "Informations légales relatives au site Many VTC.",
+    mentionsLead: "Informations légales relatives au site VTC MANY.",
     privacyLead:
-      "Comment Many VTC (MANY CARS) traite vos données lors d'un contact, d'une réservation ou via le formulaire en ligne.",
+      "Comment VTC MANY (MANY CARS) traite vos données lors d'un contact, d'une réservation ou via le formulaire en ligne.",
     mentionsSections: [
       {
         title: "Éditeur du site",
@@ -413,6 +413,6 @@ export const dictionary = {
     ],
   },
   whatsapp: {
-    label: "Contacter Many VTC sur WhatsApp",
+    label: "Contacter VTC MANY sur WhatsApp",
   },
 };
