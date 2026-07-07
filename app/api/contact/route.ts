@@ -40,17 +40,17 @@ async function sendViaMailerSend(
   replyToEmail: string,
   replyToName: string
 ) {
-  const apiKey = process.env.MAILERSEND_API_KEY;
+  const apiKey = process.env.MAILERSEND_API_KEY?.trim();
   if (!apiKey) return false;
 
-  const fromEmail = process.env.MAILERSEND_FROM_EMAIL;
+  const fromEmail = process.env.MAILERSEND_FROM_EMAIL?.trim();
   if (!fromEmail) {
     console.error("[VTC MANY contact] MAILERSEND_FROM_EMAIL manquant");
     return false;
   }
 
-  const fromName = process.env.MAILERSEND_FROM_NAME || business.name;
-  const toEmail = process.env.MAILERSEND_TO_EMAIL || business.email;
+  const fromName = (process.env.MAILERSEND_FROM_NAME || business.name).trim();
+  const toEmail = (process.env.MAILERSEND_TO_EMAIL || business.email).trim();
 
   const res = await fetch("https://api.mailersend.com/v1/email", {
     method: "POST",
@@ -111,7 +111,9 @@ export async function POST(request: Request) {
     const sent = await sendViaMailerSend(subject, text, email, replyToName);
 
     if (process.env.NODE_ENV === "production") {
-      if (!process.env.MAILERSEND_API_KEY || !process.env.MAILERSEND_FROM_EMAIL) {
+      const apiKey = process.env.MAILERSEND_API_KEY?.trim();
+      const fromEmail = process.env.MAILERSEND_FROM_EMAIL?.trim();
+      if (!apiKey || !fromEmail) {
         console.error("[VTC MANY contact] MailerSend non configuré en production");
         return NextResponse.json({ error: "Email not configured" }, { status: 503 });
       }
