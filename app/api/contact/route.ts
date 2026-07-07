@@ -50,10 +50,7 @@ async function sendViaMailerSend(
   }
 
   const fromName = (process.env.MAILERSEND_FROM_NAME || business.name).trim();
-  const extraTo = process.env.MAILERSEND_TO_EMAIL?.trim();
-  const recipients = Array.from(
-    new Set([business.email, extraTo].filter((e): e is string => Boolean(e)))
-  );
+  const toEmail = (process.env.MAILERSEND_TO_EMAIL || business.email).trim();
 
   const res = await fetch("https://api.mailersend.com/v1/email", {
     method: "POST",
@@ -63,7 +60,7 @@ async function sendViaMailerSend(
     },
     body: JSON.stringify({
       from: { email: fromEmail, name: fromName },
-      to: recipients.map((email) => ({ email, name: business.name })),
+      to: [{ email: toEmail, name: business.name }],
       reply_to: { email: replyToEmail, name: replyToName || replyToEmail },
       subject,
       text,
