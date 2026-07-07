@@ -18,5 +18,8 @@ export function isLocale(value: string): value is Locale {
   return locales.includes(value as Locale);
 }
 
+const rawSiteUrl = process.env.NEXT_PUBLIC_SITE_URL?.trim();
 export const siteUrl =
-  process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.vtcmany.fr";
+  rawSiteUrl && rawSiteUrl.length > 0
+    ? rawSiteUrl.replace(/\/$/, "")
+    : "https://www.vtcmany.fr";
