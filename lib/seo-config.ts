@@ -58,7 +58,7 @@ const services: Record<Locale, SeoMeta> = {
   fr: meta(
     `Services VTC à Narbonne — Transferts & courses | ${BRAND}`,
     "Courses locales, transferts gare et aéroport, longue distance et mise à disposition à Narbonne. Chauffeur privé 24h/24 · 7j/7, tarif annoncé sur devis.",
-    "Services VTC à Narbonne — transferts et courses",
+    "Services VTC à Narbonne transferts et courses",
     "services",
     "services vtc narbonne"
   ),
