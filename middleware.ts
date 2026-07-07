@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
-import { defaultLocale, isLocale, locales } from "./lib/i18n";
+import { defaultLocale, isLocale } from "./lib/i18n";
 
 export function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
@@ -8,13 +8,15 @@ export function middleware(request: NextRequest) {
     pathname.startsWith("/api") ||
     pathname.startsWith("/_next") ||
     pathname.startsWith("/favicon") ||
+    pathname === "/sitemap.xml" ||
+    pathname === "/robots.txt" ||
     pathname.includes(".")
   ) {
-    return;
+    return NextResponse.next();
   }
 
   const segment = pathname.split("/")[1];
-  if (isLocale(segment)) return;
+  if (isLocale(segment)) return NextResponse.next();
 
   const url = request.nextUrl.clone();
   url.pathname = `/${defaultLocale}${pathname === "/" ? "" : pathname}`;
@@ -22,5 +24,5 @@ export function middleware(request: NextRequest) {
 }
 
 export const config = {
-  matcher: ["/((?!_next/static|_next/image).*)"],
+  matcher: ["/((?!_next/static|_next/image|sitemap.xml|robots.txt).*)"],
 };
