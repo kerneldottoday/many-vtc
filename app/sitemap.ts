@@ -1,17 +1,17 @@
 import type { MetadataRoute } from "next";
-import { defaultLocale, locales, siteUrl } from "@/lib/i18n";
+import { locales, siteUrl } from "@/lib/i18n";
 import { allSitemapPaths } from "@/lib/routes";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const entries: MetadataRoute.Sitemap = [];
 
   for (const page of allSitemapPaths()) {
-    const languages: Record<string, string> = {
-      "x-default": `${siteUrl}/${defaultLocale}${page ? `/${page}` : ""}`,
-    };
-    for (const locale of locales) {
-      languages[locale] = `${siteUrl}/${locale}${page ? `/${page}` : ""}`;
-    }
+    const languages = Object.fromEntries(
+      locales.map((locale) => [
+        locale,
+        `${siteUrl}/${locale}${page ? `/${page}` : ""}`,
+      ])
+    );
 
     const isLegal =
       page.includes("mentions") || page.includes("politique");
