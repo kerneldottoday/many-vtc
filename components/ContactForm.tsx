@@ -285,6 +285,17 @@ export default function ContactForm({ dict, locale }: ContactFormProps) {
             <label className="block">
               <span className="label-meta mb-2 block">{dict.time} *</span>
               <input
+                type="time"
+                value={isValidFrenchTime(form.time) ? form.time : ""}
+                onChange={(e) => field("time", e.target.value)}
+                lang="fr-FR"
+                step={300}
+                className={`input-field input-time md:hidden ${errors.time ? "input-error" : ""}`}
+                aria-invalid={!!errors.time}
+                aria-describedby={errors.time ? "time-error" : undefined}
+                required
+              />
+              <input
                 name="time"
                 type="text"
                 inputMode="numeric"
@@ -293,7 +304,7 @@ export default function ContactForm({ dict, locale }: ContactFormProps) {
                 onChange={(e) => field("time", e.target.value)}
                 lang="fr-FR"
                 autoComplete="off"
-                className={`input-field ${errors.time ? "input-error" : ""}`}
+                className={`input-field hidden md:block ${errors.time ? "input-error" : ""}`}
                 aria-invalid={!!errors.time}
                 aria-describedby={errors.time ? "time-error" : undefined}
                 required
