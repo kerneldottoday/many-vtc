@@ -109,8 +109,15 @@ export async function POST(request: Request) {
     console.info("[VTC MANY contact]", text);
 
     const sent = await sendViaMailerSend(subject, text, email, replyToName);
-    if (process.env.NODE_ENV === "production" && process.env.MAILERSEND_API_KEY && !sent) {
-      return NextResponse.json({ error: "Email failed" }, { status: 502 });
+
+    if (process.env.NODE_ENV === "production") {
+      if (!process.env.MAILERSEND_API_KEY || !process.env.MAILERSEND_FROM_EMAIL) {
+        console.error("[VTC MANY contact] MailerSend non configuré en production");
+        return NextResponse.json({ error: "Email not configured" }, { status: 503 });
+      }
+      if (!sent) {
+        return NextResponse.json({ error: "Email failed" }, { status: 502 });
+      }
     }
 
     return NextResponse.json({ ok: true });
