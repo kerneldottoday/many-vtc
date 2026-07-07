@@ -101,6 +101,9 @@ export async function POST(request: Request) {
     if (Number.isNaN(p) || p < 1) {
       return NextResponse.json({ error: "Invalid passengers" }, { status: 400 });
     }
+    if (p > 6) {
+      return NextResponse.json({ error: "Too many passengers" }, { status: 400 });
+    }
 
     const replyToName = [body.firstName, body.lastName].filter(Boolean).join(" ").trim();
     const subject = `Nouvelle demande de réservation — ${replyToName || firstName}`;

@@ -10,7 +10,8 @@ export const business = {
   region: "Occitanie",
   country: "FR",
   director: "Mohamed BOUZID",
-  googleMapsUrl: "https://www.google.com/maps?cid=12210354936377896073",
+  googleMapsUrl:
+    "https://www.google.com/maps/place/VTC+MANY+CHAUFFEUR+PRIV%C3%89/@43.1786678,2.9956348,14z/data=!4m6!3m5!1s0x12b1ad002ac641ef:0xa973e51f143dec89!8m2!3d43.1786678!4d2.9956348!16s%2Fg%2F11y0gj3fc_?hl=fr&entry=ttu",
   googleReviewsUrl:
     "https://www.google.com/search?q=VTC+MANY+CHAUFFEUR+PRIV%C3%89+Avis&hl=fr-FR&tbm=lcl&rldimm=12210354936377896073#lkt=LocalPoiReviews",
   whatsappUrl:

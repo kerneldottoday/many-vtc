@@ -1,9 +1,10 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import { business } from "@/lib/business";
 
-const MAP_SRC =
-  "https://maps.google.com/maps?q=Narbonne%2C+Aude%2C+Occitanie&t=&z=11&ie=UTF8&iwloc=&output=embed";
+const MAP_EMBED_SRC =
+  "https://www.google.com/maps?q=43.1786678,2.9956348&hl=fr&z=13&output=embed";
 
 export default function ServiceAreaMap({
   title,
@@ -37,12 +38,18 @@ export default function ServiceAreaMap({
     <div ref={ref} className="mt-16">
       <h2 className="font-display text-xl font-medium tracking-tighter">{title}</h2>
       <p className="body-md mt-2 text-white/60">{caption}</p>
-      <div className="mt-6 aspect-[16/9] w-full overflow-hidden border border-brand-border bg-brand-surface">
+      <a
+        href={business.googleMapsUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="map-link mt-6 block aspect-[16/9] w-full overflow-hidden border border-brand-border bg-brand-surface transition hover:border-white/15"
+        aria-label={`${title} — Google Maps`}
+      >
         {show ? (
           <iframe
             title={title}
-            src={MAP_SRC}
-            className="h-full w-full border-0"
+            src={MAP_EMBED_SRC}
+            className="pointer-events-none h-full w-full border-0"
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
             allowFullScreen
@@ -52,7 +59,7 @@ export default function ServiceAreaMap({
             …
           </div>
         )}
-      </div>
+      </a>
     </div>
   );
 }
